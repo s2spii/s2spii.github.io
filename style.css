@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  overflow: hidden;
+  color: white;
+}
+
+video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+h1 {
+  font-size: 6rem;
+  position: absolute;
+  top: 2vh;
+  left: 10vw;
+  font-weight: bold;
+  text-shadow: -3px 3px rgba(0, 0, 0, 0.561);
+  color: whitesmoke;
+  animation: title ease 1s;
+}
+
+.button {
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1.5rem 2.5rem;
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.77);
+  border-radius: 20px;
+  font-size: 2em;
+  box-shadow: 0 0 6px rgb(0, 0, 0);
+  cursor: pointer;
+  display: flex;
+  transition: 0.7s ease;
+  animation: button ease 1s;
+}
+
+#city {
+  position: absolute;
+  bottom: 40%;
+  left: 50%;
+  color: white;
+  font-weight: bold;
+  width: min-content;
+}
+
+.text {
+  margin: 0;
+  font-weight: bold;
+  transform: translateX(14px);
+  transition: 0.4s ease;
+}
+
+.fa-solid {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: 0.4s ease;
+}
+
+.button:hover .fa-solid {
+  opacity: 1;
+  transform: translateX(10px);
+}
+.button:hover .text {
+  transform: translate(-10px);
+}
+.button:active {
+  transform: scale(0.96) translateX(-50%);
+}
+
+@keyframes button {
+  0% {
+    opacity: 0;
+    transform: translateY(300px) translateX(-50%);
+    scale: 0.5;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) translateX(-50%);
+  }
+}
+
+@keyframes title {
+  0% {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
