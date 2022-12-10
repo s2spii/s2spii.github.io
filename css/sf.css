@@ -1,0 +1,148 @@
+/* * {
+  border: 2px solid red;
+} */
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url("/media/bgbsf.jpg") center/cover;
+  color: #e8e6e3;
+  font-size: 1.3em;
+}
+
+header {
+  height: 100vh;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background: url("/media/bgsf.jpg") no-repeat center/cover;
+  width: 100%;
+  text-transform: uppercase;
+  color: white;
+  font-size: 3rem;
+  text-shadow: -5px 4px black;
+  border-radius: 0 0 20px 20px;
+  margin-bottom: 30px;
+  z-index: 5;
+  position: relative;
+}
+
+.sommaire {
+  box-shadow: 0 0 6px black;
+  border: 4px solid black;
+  width: 20%;
+  height: 70%;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1%;
+  border-radius: 10px;
+  z-index: 2;
+  background-color: #272a2c;
+}
+
+section {
+  background-color: #272a2c;
+  width: 74%;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  border: 4px solid black;
+}
+
+main {
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  text-align: center;
+}
+
+a {
+  color: beige;
+  text-decoration: none;
+}
+
+@media (350px <= width <= 900px) {
+  .container {
+    display: inline-block;
+    cursor: pointer;
+    position: fixed;
+    top: 1%;
+    right: 2%;
+    z-index: 5;
+  }
+
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: rgb(255, 255, 255);
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+
+  .change .bar2 {
+    opacity: 0;
+  }
+
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
+  body {
+    /* background: #fff; */
+    overflow-x: hidden;
+  }
+  header {
+    font-size: 1.3rem;
+  }
+
+  .sommaire {
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+  }
+
+  .somup {
+    opacity: 1;
+    animation: sommaire 1s ease;
+  }
+
+  section {
+    max-width: 100%;
+    min-width: 100%;
+    margin: 0 0 20px 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    font-size: 1em;
+  }
+  section p {
+    padding: 10px;
+    line-height: 1.5;
+  }
+}
+
+@keyframes sommaire {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 150%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-50%, -50%);
+  }
+}
