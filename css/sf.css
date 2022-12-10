@@ -69,7 +69,7 @@ a {
   text-decoration: none;
 }
 
-@media (350px <= width <= 900px) {
+@media (350px <= width <= 1000px) {
   .container {
     display: inline-block;
     cursor: pointer;
