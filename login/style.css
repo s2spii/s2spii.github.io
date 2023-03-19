@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Unbounded&display=swap");
+
+body {
+  background: #1a1a1a;
+  font-family: sans-serif;
+  color: whitesmoke;
+}
+
+.login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  font-family: "Unbounded", sans-serif;
+}
+h2 {
+  margin: 0;
+}
+
+form {
+  background-color: rgba(192, 192, 192, 0.5);
+  text-align: center;
+  padding: 2rem 0;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 3rem;
+  color: rgb(166, 158, 158);
+}
+
+input {
+  margin-bottom: 3rem;
+  outline: none;
+  border: none;
+  background-color: silver;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+span {
+  margin-left: 5px;
+}
+
+button {
+  background-color: silver;
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 1px 3px 7px black;
+}
